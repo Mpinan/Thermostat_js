@@ -27,4 +27,12 @@ class Thermostat {
   isPowerSavingOn() {
     return this.PWS === true;
   }
+
+  powerSavingModeOff() {
+    return this.PWS = false;
+  }
+
+  powerSavingModeOn() {
+    return this.PWS = true
+  }
 }

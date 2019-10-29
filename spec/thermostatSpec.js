@@ -30,4 +30,17 @@ describe('Thermostat', function () {
     expect(thermostat.isPowerSavingOn()).toBe(true);
   });
 
+  it('can switch PSM off', function () {
+    thermostat.powerSavingModeOff();
+
+    expect(thermostat.isPowerSavingOn()).toBe(false);
+  });
+
+  it('can switch PSM back on', function () {
+    thermostat.powerSavingModeOff();
+    expect(thermostat.isPowerSavingOn()).toBe(false);
+    thermostat.powerSavingModeOn();
+    expect(thermostat.isPowerSavingOn()).toBe(true);
+  });
+
 })
