@@ -2,6 +2,7 @@ class Thermostat {
   constructor() {
     this.MIN_TEMPERATURE = 10;
     this.temperature = 20;
+    this.PWS = true;
   }
 
   getCurrentTemperature() {
@@ -21,5 +22,9 @@ class Thermostat {
 
   isMinimumTemperature() {
     return this.temperature === this.MIN_TEMPERATURE;
+  }
+
+  isPowerSavingOn() {
+    return this.PWS === true;
   }
 }
